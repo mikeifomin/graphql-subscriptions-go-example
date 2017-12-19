@@ -3,7 +3,7 @@ fs = require 'fs'
 
 resolvers = require './resolvers.coffee'
 
-FILENAME = __dirname + "/../../../schema.go"
+FILENAME = __dirname + "/../../schema/schema.go"
 
 START = 'start_used_for_js_mock_server'
 END = 'end_used_for_js_mock_server'

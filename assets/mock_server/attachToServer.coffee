@@ -12,6 +12,7 @@ module.exports = (server)->
     ]
     online: []
     users: []
+    sessions: []
 
   new SubscriptionServer {
     execute
@@ -22,9 +23,18 @@ module.exports = (server)->
         currentUser:{id:"1",name:"mike"}
         token
       }
+    onDisconnect: (ws)->
+      sessions = ws._sessions or []
+      
+      for sIdDel in sessions
+        for i,s in db.sessions 
+          if s.id == sIdDel
+            db.sessions[i].deleted = true
+            pubsub.publish("updatedSession_#{s.room}",s)
 
-    onOperation: (message, params, webSocket)-> 
-      { ...params, context:{...params.context, db,pubsub}}
+    onOperation: (message, params,ws)-> 
+      
+      { ...params, context:{...params.context, db,pubsub,ws}}
     
   }, {
     server

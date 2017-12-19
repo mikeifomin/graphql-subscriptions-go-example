@@ -15,7 +15,7 @@
     "apollo-link-http": "^1.2.0",
     "apollo-link-ws": "^1.0.1",
     "coffee-loader": "^0.9.0",
-    "coffeescript": "^2.0.3",
+    "coffeescript": "^2.1.0",
     "graphql": "^0.11.7",
     "graphql-subscriptions": "^0.5.5",
     "graphql-tag": "^2.5.0",
