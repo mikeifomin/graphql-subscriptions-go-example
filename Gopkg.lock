@@ -2,9 +2,15 @@
 
 
 [[projects]]
+  name = "github.com/gorilla/websocket"
+  packages = ["."]
+  revision = "ea4d1f681babbce9545c9c5f3d5194a789c89f5b"
+  version = "v1.2.0"
+
+[[projects]]
   branch = "subscription"
   name = "github.com/neelance/graphql-go"
-  packages = [".","errors","internal/common","internal/exec","internal/exec/packer","internal/exec/resolvable","internal/exec/selected","internal/query","internal/schema","internal/validation","introspection","log","trace"]
+  packages = [".","errors","internal/common","internal/exec","internal/exec/packer","internal/exec/resolvable","internal/exec/selected","internal/query","internal/schema","internal/validation","introspection","log","trace","ws","ws/queries"]
   revision = "b407faba716b55d3c811a54f7bb5e21969da6ba1"
   source = "github.com/mikeifomin/graphql-go"
 
@@ -23,6 +29,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "e83a2bb87e37ce1e8d4b03859b11a93a2f864a2d9b231a238d4300972243d961"
+  inputs-digest = "54f29b09da9b8cdb53c8f0b55136bba3718f02ac7e3b4eccb4512c335a478fcd"
   solver-name = "gps-cdcl"
   solver-version = 1
